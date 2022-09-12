@@ -3,6 +3,7 @@
 *{
     padding:0;
     margin:0;
+    overflow:hidden;
 
 }
 
@@ -12,34 +13,38 @@
 .main{
     background-color:rgb(195, 105, 105);
 
-    /* padding:200px; */
+    display:grid;
+
 
     grid-area:main;
-    margin-top:20%;
-    margin-bottom: 25%;
-    margin-left:15%;
 
-
-  
+   grid-template-columns: auto auto auto auto auto auto auto auto ;
+    
+    
     
 
 
 }
 .main2{
- background-color:yellow;
- /* padding:200px; */
+ 
  grid-area:main2;
- margin-top:20%;
- margin-bottom: 25%;
- margin-right:15%;
+
+ display:grid;
+
+ grid-template-columns:  auto auto auto auto auto auto auto auto;
+
+
+
 
 
 
 }
 
-#box{
-    background-color:blue;
+#boxMain,#boxMain2{
+    background-color: #484868;
    
+
+    border:2px solid rgb(53, 48, 48);
 
 
 
@@ -53,11 +58,21 @@
 
     
 }
+
+.header{
+    grid-area: header;
+}
+.footer{
+    grid-area: footer;
+}
 .control{
     display:grid;
     grid-template-areas: 
+    'header header header header'
     'main main main2 main2'
-    'main main main2 main2';
+    'main main main2 main2'
+    'main main main2 main2'
+    'footer footer footer footer';
     
    
     
